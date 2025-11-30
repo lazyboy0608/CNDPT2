@@ -1,1 +1,2 @@
-Thay video ở line 533
++ Còn thiếu ảnh và video
++ Dịch toàn bộ tiếng Anh sang tiếng Việt
