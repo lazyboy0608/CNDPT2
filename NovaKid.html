@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>NovaKid</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Gluten:wght@100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <link rel="icon" type="image/svg+xml" class="w-full" href="/imgvid/Red Simple Cute Online Book Club Logo.svg" />
+  <style type="text/tailwindcss">
+    :root {
+        --speech-bubble-left-arrow-color: #a5fcb8;
+        --speech-bubble-right-arrow-color: #f9a8d4;
+      }
+      .speech-bubble-left {
+        position: relative;
+      }
+      .speech-bubble-left::after {
+        content: "";
+        position: absolute;
+        left: 2rem;
+        bottom: -1rem;
+        width: 0;
+        height: 0;
+        border-left: 15px solid transparent;
+        border-right: 15px solid transparent;
+        border-top: 15px solid var(--speech-bubble-left-arrow-color);
+        transform: translateX(-50%);
+      }
+      .speech-bubble-right {
+        position: relative;
+      }
+      .speech-bubble-right::after {
+        content: "";
+        position: absolute;
+        left: 2rem;
+        bottom: -1rem;
+        width: 0;
+        height: 0;
+        border-left: 15px solid transparent;
+        border-right: 15px solid transparent;
+        border-top: 15px solid var(--speech-bubble-right-arrow-color);
+        transform: translateX(-50%);
+      }
+      .carousel-container {
+        scroll-behavior: smooth;
+        scroll-snap-type: x mandatory;
+      }
+      .carousel-item {
+        scroll-snap-align: start;
+        flex-shrink: 0;
+      }
+    </style>
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            primary: "#3b82f6",
+            "background-light": "#FFFBF2",
+            "background-dark": "#111827",
+            "brand-blue": "#4A90E2",
+            "brand-yellow": "#FFD166",
+            "brand-pink": "#EF476F",
+            "brand-green": "#06D6A0",
+            "brand-cyan": "#118AB2",
+          },
+          fontFamily: {
+            display: ["Gluten", "sans-serif"],
+            body: ["Nunito", "sans-serif"],
+          },
+          borderRadius: {
+            DEFAULT: "0.75rem",
+            lg: "1rem",
+            xl: "1.5rem",
+            "2xl": "2rem",
+          },
+          boxShadow: {
+            cute: "0 8px 16px rgba(0, 0, 0, 0.1)",
+          },
+          keyframes: {
+            "infinite-scroll": {
+              "0%": { transform: "translateX(0)" },
+              "100%": { transform: "translateX(calc(-50% / 2))" },
+            },
+          },
+        },
+      },
+    };
+  </script>
+</head>
+
+<body class="font-body bg-background-light dark:bg-background-dark text-gray-700 dark:text-gray-300">
+  <div class="relative overflow-hidden">
+    <header class="bg-brand-blue dark:bg-indigo-900 text-white relative overflow-hidden">
+
+      <div class="absolute inset-0 z-0 pointer-events-none">
+        <img src="/imgvid/Background.svg" alt="Background Pattern" class="w-full h-full object-cover opacity-40" />
+      </div>
+
+      <div class="container mx-auto px-6 py-4 relative z-10">
+        <nav class="flex items-center justify-between">
+          <div class="flex items-center space-x-2">
+            <a href="#">
+              <img alt="NOVAKID Logo" class="h-40 w-40" src="/imgvid/Red Simple Cute Online Book Club Logo.svg" />
+            </a>
+          </div>
+          <div class="hidden md:flex items-center space-x-20 text-lg font-medium">
+            <a class="text-2xl hover:text-brand-yellow transition-colors font-body" href="#">Về Chúng Tôi</a>
+            <a class="text-2xl hover:text-brand-yellow transition-colors font-body" href="#">Đánh Giá</a>
+            <a class="text-2xl hover:text-brand-yellow transition-colors font-body" href="#">Quà Tặng</a>
+          </div>
+          <a class="text-2xl bg-brand-yellow hover:bg-yellow-400 hover:text-white text-brand-blue font-bold py-3 px-8 rounded-full shadow-lg transition-transform transform hover:scale-105"
+            href="#">Đặt Hàng Ngay</a>
+        </nav>
+      </div>
+
+      <div class="container mx-auto px-6 pt-16 pb-32 text-center md:text-left relative z-10">
+        <div class="flex flex-col md:flex-row items-center">
+          <div class="md:w-1/2 mb-10 md:mb-0">
+            <span
+              class="inline-block hover:bg-yellow-400 bg-white/20 text-white text-sm font-bold px-3 py-1 rounded-full mb-4 transition-transform transform hover:scale-105">100%
+              ĐỘC QUYỀN</span>
+            <h1 class="text-5xl md:text-8xl font-display font-bold leading-tight">
+              NovaKid
+            </h1>
+            <h1 class="text-5xl md:text-3xl font-display font-bold leading-tight">
+              Sách Cho Lứa Tuổi Nhi Đồng
+            </h1>
+            <p class="mt-4 text-lg text-blue-100 font-body max-w-lg">
+              Phân phối độc quyền, giao hàng miễn phí toàn quốc. Trẻ em có thể
+              bắt đầu học tiếng Anh, Khoa học, Kĩ năng sống với chúng tôi, ngay cả khi chưa có kiến
+              thức nền tảng!
+            </p>
+            <button
+              class="mt-8 bg-white/95 hover:bg-yellow-400 hover:text-white text-brand-blue font-bold text-lg py-4 px-8 rounded-full shadow-lg transition-transform transform hover:scale-105 flex items-center mx-auto md:mx-0">
+              Nhận Tư Vấn
+              <span class="material-symbols-outlined ml-2">arrow_forward</span>
+            </button>
+          </div>
+          <!-- <div
+          class="absolute bottom-0 left-0 w-full h-24 bg-no-repeat bg-cover"
+          style="
+            background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuADrX9sAEB3GghM2qO1fFnjmppSdVZdsSK532Dl5Jju08IfK1Db90Ng1BtrG9gpBkq6BhcWQEJOWzqUuMikAd-K_miBNy9MDrkDHysixIa4eCpsR7i2gr049eziZXK-SfLEvfoLKJn_YJ3e4IkYuIMIsnGiDd-7FQv1OKGPjsnLNcy4OE146xbd0o1SROBwK_9tCnZ0XOrgiTmxZnq3It1ZGp6XGDC7QMY8HZq_4dC_N4QysM7_0Yq7_1Q8Xem2nZ2EkMT9lfMs3Dc');
+          "
+        ></div> -->
+        </div>
+      </div>
+   </header>
+    <main>
+      <section class="py-24 bg-background-light dark:bg-background-dark relative overflow-hidden">
+        <div class="container mx-auto px-6 text-center relative z-10">
+          <span class="text-7xl text-orange-400 font-bold leading-none">“</span>
+          <h2 class="text-4xl font-display font-bold text-gray-800 dark:text-white mt-[-2rem]">
+            NovaKid – đồng hành cùng phụ huynh xây dựng nền tảng tri thức vững chắc cho trẻ.
+          </h2>
+          <p class="mt-4 max-w-3xl mx-auto text-gray-600 dark:text-gray-400 text-lg">
+            là nền tảng sách giáo dục dành cho trẻ 3–15 tuổi, được biên soạn bởi đội ngũ chuyên gia giàu kinh nghiệm, kết hợp kiến thức chuẩn quốc tế và phương pháp học hiện đại. Mỗi bộ sách được thiết kế sinh động, dễ tiếp thu và phù hợp từng độ tuổi, giúp trẻ phát triển tư duy, ngôn ngữ và kỹ năng sống một cách tự nhiên.
+          </p>
+          <span class="text-7xl text-orange-400 font-bold leading-none">”</span>
+        </div>
+        <img alt="Cute cartoon book character"
+          class="absolute top-20 left-20 w-24 opacity-50 transform -rotate-12 hidden lg:block hover:opacity-100 transition-opacity duration-300 cursor-pointer"
+          src="https://lh3.googleusercontent.com/aida-public/AB6AXuBgXpXWFethQPFlun-gDYf6RGtkS0LIgiGIMjOYvy4--TQJbdp8hJa3ihZ3PEyaOasN-uoI1Z9t23ldunMxaOfVxSL-r2CgyBy__lp26Z33T2OLgy6ofdS-VTQFqiwM_qPzC2hhIoIHWObzt-DvXa6BMaYZ2dGrLeci5e9GwerhfOwSqBD3sRNZXVM9F4jpGlrwEkGbCpyRngAn2Z1x1y8584bDqfMrZGmIGmVcoZg40Muv-byAkph2I01FB1EY6wSshsLrQIIpI8E" />
+        <img alt="Cute cartoon star character"
+          class="absolute bottom-16 right-16 w-24 opacity-50 transform rotate-12 hidden lg:block hover:opacity-100 transition-opacity duration-300 cursor-pointer"
+          src="https://lh3.googleusercontent.com/aida-public/AB6AXuAVekL-drxTv_YnuqonrxOxP29fefhwKroMxDEeUs60TRzSPkU6u01ZljEoqmKBUoDKfetYBpN0Y-ol4jNZrZv0-iGVJUvO06Qrb6Z55GRjZvSk9mkTze5BuiSFRjKLUCBLdx5zxM3WzjJFt7azVmhMXI04iqaLrAARtCfXiJZT2h8TWIA3wvwhw64UnI-yGSskIL-9_VrLilHDpGWdF1OlvgO8jwOeEC_sCaOWlj1zeLsc6q669J8Nog2zH6O-sIICI7ovPxmViu4" />
+        <img alt="Cute cartoon pencil character"
+          class="absolute bottom-5 left-1/4 w-24 opacity-30 transform -rotate-6 hidden lg:block hover:opacity-100 transition-opacity duration-300 cursor-pointer"
+          src="https://lh3.googleusercontent.com/aida-public/AB6AXuC63njhBSdxtSPrWHS17pjNRmC9wYwwx616_cWY6WISILYALIglzXV8T1qSo0in5O41zJkBrlghJvftIQ7aoyYrQ9MBuh8z4StVhxPDrC3ul8xCk68q-ovCQGK39aYXqt7hwqv6nQ7zQh2a-8bVzSPyvAtaJv8gy2OIRJwNz-Wh5FA2IqNGjzQjXEgUvqWEVAFzm6IWXLbAbYNw8OntblEQ0_gq4HrjqRUiQQEVGaFOK0xdB31TDjVl2fTo53c5SsUuypDBYd3jzZs" />
+        <img alt="Cute cartoon lightbulb character"
+          class="absolute top-5 right-1/4 w-24 opacity-40 transform rotate-6 hidden lg:block hover:opacity-100 transition-opacity duration-300 cursor-pointer"
+          src="https://lh3.googleusercontent.com/aida-public/AB6AXuCeeJreAuwJ5Z8ich4UYRGyCbd4Fp84y9Ls53unmQ9TY3Cbpwijq1eBJt5bF88Spe2qrRhd6Cq2xBv5T8Yt_TgAHnrkz7R6NYxyjt67YxOghwWJAR9H0mQLeuXGCltyHHCKBhI3Z0B9BYG24efh-5UDIv-pVoiHsPXqTurjrX7gRuo8vAx4nIfHf3IFBLeLV97my0fkZ384Uk3lFMlejVJ-Bht3gy4DrWGkvt7JLlu56G4pHa2C9fU3u4pLT5gHCRRMn3RXvJqzskU" />
+      </section>
+      <section class="py-24 bg-sky-50 dark:bg-gray-800">
+        <div class="container mx-auto px-6 text-center">
+          <h2 class="text-4xl font-display font-bold text-gray-800 dark:text-white">
+            Tại Sao Chọn Sách Của Chúng Tôi?
+          </h2>
+          <div class="grid md:grid-cols-3 gap-8 mt-12">
+            <div
+              class="bg-white dark:bg-gray-700 p-8 rounded-2xl shadow-cute text-center transform hover:-translate-y-2 transition-transform">
+              <img alt="Cartoon number one with a friendly face" class="h-28 mx-auto mb-4"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuChJiFY_Gw9lp5G_-bFYmYVCSZoaya4upsDEZll9-FyXDCZWe2HmAbZW6HC9oX_QYaVkh5vl1Qw9FUr5hXCdFoAFENZr7dDmnYZfgzHgxmLcg4vvjnjw7wFFRunXSf7ldpraYrOKP1KAsK6jj_COcTG0KpkedBGlarVEklvZHkr9gBAE3co28grvZm8Y26qnrZ4lBq6HKxvjDy20gc-nZdhqjGsrnRGrTjIKCp_ziCHSePBbbxtMrthJUHpfjn-d7vjXB1kD9rZMtg" />
+              <h3 class="text-2xl font-display font-semibold text-gray-800 dark:text-white">
+                Học Tập Hấp Dẫn
+              </h3>
+              <p class="mt-2 text-gray-600 dark:text-gray-400">
+                Các bài học trong sách được thiết kế với hình ảnh sinh động, câu chữ đơn giản và nhiều ví dụ quen thuộc
+                giúp trẻ dễ hiểu, ghi nhớ lâu và yêu thích việc học hơn.
+              </p>
+            </div>
+            <div
+              class="bg-white dark:bg-gray-700 p-8 rounded-2xl shadow-cute text-center transform hover:-translate-y-2 transition-transform">
+              <img alt="Cartoon number 2" class="h-28 mx-auto mb-4" src="/imgvid/2.png" />
+              <h3 class="text-2xl font-display font-semibold text-gray-800 dark:text-white">
+                Hoạt Động Sáng Tạo
+              </h3>
+              <p class="mt-2 text-gray-600 dark:text-gray-400">
+                Sách kèm theo các hoạt động tô màu, trò chơi nhỏ, câu đố và bài hát giúp trẻ vừa học vừa chơi, kích
+                thích trí tưởng tượng và khơi dậy niềm vui khám phá thế giới.
+              </p>
+            </div>
+            <div
+              class="bg-white dark:bg-gray-700 p-8 rounded-2xl shadow-cute text-center transform hover:-translate-y-2 transition-transform">
+              <img alt="Cartoon number 3" class="h-28 mx-auto mb-4" src="/imgvid/3.png" />
+              <h3 class="text-2xl font-display font-semibold text-gray-800 dark:text-white">
+                Hỗ Trợ Dành Cho Phụ Huynh
+              </h3>
+              <p class="mt-2 text-gray-600 dark:text-gray-400">
+                Phần hướng dẫn đi kèm giúp phụ huynh hiểu cách đồng hành cùng con, tạo môi trường học tập tích cực và
+                giúp trẻ phát triển kỹ năng một cách tự nhiên.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="py-24 bg-background-light dark:bg-background-dark">
+        <div class="container mx-auto px-6 text-center">
+          <h2 class="text-4xl font-display font-bold text-gray-800 dark:text-white relative inline-block">
+            <span
+              class="absolute -top-4 -left-8 bg-cyan-200/50 dark:bg-cyan-700/50 rounded-full w-20 h-20 -z-10"></span>
+            Tìm Hiểu Về Bộ Sách Của NOVAKID
+          </h2>
+          <p class="mt-4 max-w-3xl mx-auto text-gray-600 dark:text-gray-400 text-lg font-body">
+            Bộ sách gồm nhiều loại sách được thiết kế đẹp mắt và hấp dẫn. Mỗi cuốn
+            sách học Tiếng Anh bao gồm Sách giáo khoa, Sách bài tập, Sách luyện viết và Sách
+            đọc hiểu, cùng các loại sách khác về kiến thức khoa học, kỹ năng sống và truyện.
+          </p>
+          <div class="mt-12 relative overflow-hidden group">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-10 justify-items-center">
+              <div class="Book1 flex flex-col items-center text-center">
+                <img alt="Cover of children's english book 'My Little World'"
+                  class="w-auto h-64 rounded-lg shadow-lg transition-transform transform hover:-rotate-6"
+                  src="/imgvid/ảnh 10.jpg" />
+                <div class="text-xl font-body">
+                  <p class="mt-4 max-w-3xl mx-auto text-gray-600 dark:text-gray-400 text-lg font-bold">
+                    Sách Làm Quen với Tiếng Anh</br> cho trẻ 3-4 tuổi
+                  </p>
+                  <p class="mt-2 max-w-3xl mx-auto text-red-600 dark:text-gray-400 text-lg font-bold underline">
+                    24.000
+                  </p>
+                </div>
+              </div>
+              <div class="Book2 flex flex-col items-center text-center">
+                <img alt="Cover of children's english book 'Amazing Animals'"
+                  class="w-auto h-64 rounded-lg shadow-lg transition-transform transform hover:-rotate-6"
+                  src="/imgvid/ảnh sách TA 1.jpg" />
+                <div class="text-xl font-body">
+                  <p class="mt-4 max-w-3xl mx-auto text-gray-600 dark:text-gray-400 text-lg font-bold">
+                    Sách Tiếng Anh Cơ Bản</br> cho trẻ 5-6 tuổi
+                  </p>
+                  <p class="mt-2 max-w-3xl mx-auto text-red-600 dark:text-gray-400 text-lg font-bold underline">
+                    27.000
+                  </p>
+                </div>
+              </div>
+              <div class="Book3 flex flex-col items-center text-center">
+                <img alt="Cover of children's english book 'Fun with Friends'"
+                  class="w-auto h-64 rounded-lg shadow-lg transition-transform transform hover:-rotate-6"
+                  src="/imgvid/sách 10 vạn câu hỏi vì sao.jpg" />
+                <div class="text-xl font-body">
+                  <p class="mt-4 max-w-3xl mx-auto text-gray-600 dark:text-gray-400 text-lg font-bold">10 Vạn Câu Hỏi Vì
+                    Sao
+                  </p>
+                  <p class="mt-2 max-w-3xl mx-auto text-red-600 dark:text-gray-400 text-lg font-bold underline">
+                    39.000
+                  </p>
+                </div>
+              </div>
+              <div class="Book4 flex flex-col items-center text-center">
+                <img alt="Cover of children's english book 'School Days'"
+                  class="w-auto h-64 rounded-lg shadow-lg transition-transform transform hover:-rotate-6"
+                  src="/imgvid/sách tôi là betoo.jpg" />
+                <div class="text-xl font-body">
+                  <p class="mt-4 max-w-3xl mx-auto text-gray-600 dark:text-gray-400 text-lg font-bold">
+                    Tôi Là Betô
+                  </p>
+                  <p class="mt-2 max-w-3xl mx-auto text-red-600 dark:text-gray-400 text-lg font-bold underline">
+                    39.000
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-10 justify-items-center mt-10">
+              <div class="Book5 flex flex-col items-center text-center">
+                <img alt="Cover of children's english book 'My Little World'"
+                  class="w-auto h-64 rounded-lg shadow-lg transition-transform transform hover:-rotate-6"
+                  src="/imgvid/ảnh truyện.jpg" />
+                <div class="text-xl font-body">
+                  <p class="mt-4 max-w-3xl mx-auto text-gray-600 dark:text-gray-400 text-lg font-bold">
+                    Trên Đồi Mở Mắt Và Mơ
+                  </p>
+                  <p class="mt-2 max-w-3xl mx-auto text-red-600 dark:text-gray-400 text-lg font-bold underline">
+                    40.000
+                  </p>
+                </div>
+              </div>
+              <div class="Book6 flex flex-col items-center text-center">
+                <img alt="Cover of children's english book 'Amazing Animals'"
+                  class="w-auto h-64 rounded-lg shadow-lg transition-transform transform hover:-rotate-6"
+                  src="/imgvid/ảnh sách.jpg" />
+                <div class="text-xl font-body">
+                  <p class="mt-4 max-w-3xl mx-auto text-gray-600 dark:text-gray-400 text-lg font-bold">
+                    Vui Học Tiếng Anh
+                  </p>
+                  <p class="mt-2 max-w-3xl mx-auto text-red-600 dark:text-gray-400 text-lg font-bold underline">
+                    27.000
+                  </p>
+                </div>
+              </div>
+              <div class="Book7 flex flex-col items-center text-center">
+                <img alt="Cover of children's english book 'Fun with Friends'"
+                  class="w-auto h-64 rounded-lg shadow-lg transition-transform transform hover:-rotate-6"
+                  src="/imgvid/ảnh kỹ năng sống.jpg" />
+                <div class="text-xl font-body">
+                  <p class="mt-4 max-w-3xl mx-auto text-gray-600 dark:text-gray-400 text-lg font-bold">
+                    Sách Kiến Thức Khoa Học Thiết Yếu</br> cho học sinh tiểu học
+                  </p>
+                  <p class="mt-2 max-w-3xl mx-auto text-red-600 dark:text-gray-400 text-lg font-bold underline">
+                    36.000
+                  </p>
+                </div>
+              </div>
+              <div class="Book8 flex flex-col items-center text-center">
+                <img alt="Cover of children's english book 'School Days'"
+                  class="w-auto h-64 rounded-lg shadow-lg transition-transform transform hover:-rotate-6"
+                  src="/imgvid/ảnh sách bách khoa tri thức.jpg" />
+                <div class="text-xl font-body">
+                  <p class="mt-4 max-w-3xl mx-auto text-gray-600 dark:text-gray-400 text-lg font-bold">
+                    Bách Khoa Tri Thức</br> cho trẻ em
+                  </p>
+                  <p class="mt-2 max-w-3xl mx-auto text-red-600 dark:text-gray-400 text-lg font-bold underline">
+                    36.000
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-10 justify-items-center mt-10">
+              <div class="Book9 flex flex-col items-center text-center">
+                <img alt="Cover of children's english book 'My Little World'"
+                  class="w-auto h-64 rounded-lg shadow-lg transition-transform transform hover:-rotate-6"
+                  src="/imgvid/ảnh alpat.jpg" />
+                <div class="text-xl font-body">
+                  <p class="mt-4 max-w-3xl mx-auto text-gray-600 dark:text-gray-400 text-lg font-bold">
+                    Bảng Chữ Cái</br> bằng Tiếng Anh
+                  </p>
+                  <p class="mt-2 max-w-3xl mx-auto text-red-600 dark:text-gray-400 text-lg font-bold underline">
+                    22.000
+                  </p>
+                </div>
+              </div>
+              <div class="Book10 flex flex-col items-center text-center">
+                <img alt="Cover of children's english book 'Amazing Animals'"
+                  class="w-auto h-64 rounded-lg shadow-lg transition-transform transform hover:-rotate-6"
+                  src="/imgvid/ảnh 13.png" />
+                <div class="text-xl font-body">
+                  <p class="mt-4 max-w-3xl mx-auto text-gray-600 dark:text-gray-400 text-lg font-bold">
+                    Sách Tiếng Anh Discovery</br> tập 2
+                  </p>
+                  <p class="mt-2 max-w-3xl mx-auto text-red-600 dark:text-gray-400 text-lg font-bold underline">
+                    30.000
+                  </p>
+                </div>
+              </div>
+              <div class="Book11 flex flex-col items-center text-center">
+                <img alt="Cover of children's english book 'Fun with Friends'"
+                  class="w-auto h-64 rounded-lg shadow-lg transition-transform transform hover:-rotate-6"
+                  src="/imgvid/ảnh 7.jpg" />
+                <div class="text-xl font-body">
+                  <p class="mt-4 max-w-3xl mx-auto text-gray-600 dark:text-gray-400 text-lg font-bold">
+                    Sách Smart English</br> tập 3
+                  </p>
+                  <p class="mt-2 max-w-3xl mx-auto text-red-600 dark:text-gray-400 text-lg font-bold underline">
+                    23.000
+                  </p>
+                </div>
+              </div>
+              <div class="Book12 flex flex-col items-center text-center">
+                <img alt="Cover of children's english book 'School Days'"
+                  class="w-auto h-64 rounded-lg shadow-lg transition-transform transform hover:-rotate-6"
+                  src="/imgvid/ảnh 12.avif" />
+                <div class="text-xl font-body">
+                  <p class="mt-4 max-w-3xl mx-auto text-gray-600 dark:text-gray-400 text-lg font-bold">
+                    Sách Tiếng Anh Discovery</br> tập 1
+                  </p>
+                  <p class="mt-2 max-w-3xl mx-auto text-red-600 dark:text-gray-400 text-lg font-bold underline">
+                    25.000
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="mt-12 flex justify-center space-x-6">
+            <a class="bg-brand-blue hover:bg-blue-600 text-white font-bold py-4 px-10 rounded-full shadow-lg transition-transform transform hover:scale-105 flex items-center text-lg"
+              href="#">
+              MUA NGAY!
+            </a>
+            <a class="bg-brand-pink hover:bg-red-600 text-white font-bold py-4 px-10 rounded-full shadow-lg transition-transform transform hover:scale-105 flex items-center text-lg"
+              href="#">
+              NHẬN TƯ VẤN!
+            </a>
+          </div>
+        </div>
+      </section>
+      <section class="py-24 bg-background-light dark:bg-background-dark">
+        <div class="container mx-auto px-6">
+          <div class="text-center mb-12">
+            <h2 class="text-4xl font-display font-bold text-gray-800 dark:text-white relative inline-block">
+              <span
+                class="absolute -top-4 -left-8 bg-brand-pink/50 dark:bg-pink-700/50 rounded-full w-20 h-20 -z-10"></span>
+              Một Vài Điều Về NovaKid & Đánh Giá Của Phụ Huynh
+            </h2>
+            <p class="mt-4 max-w-3xl mx-auto text-gray-600 dark:text-gray-400 text-lg">
+              Cùng nghe 1 đoạn video giới thiệu về NovaKid & những chia sẻ từ các phụ huynh đã đồng hành cùng con trong
+              quá trình
+              học tập và phát triển nhận thức với bộ sách của chúng tôi.
+            </p>
+          </div>
+          <div class="flex flex-col lg:flex-row gap-12 items-center">
+            <div class="lg:w-1/2 w-full">
+              <div class="relative group rounded-2xl shadow-cute overflow-hidden">
+                <video class="w-full aspect-video object-cover rounded-2xl" controls>
+                  <source src="/imgvid/CNDPT.mp4" type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+            </div>
+            <div class="lg:w-1/2 w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-8">
+              <div class="bg-white dark:bg-gray-800 p-6 rounded-2xl shadow-cute flex flex-col items-center text-center">
+                <img alt="Photo of parent Michael B." class="w-24 h-24 rounded-full mb-4 object-cover"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuB5czn1yMyzxOMUbYeDtWdMrKnf3L9o0jjEqL4U2cZxqWeFaFTpg4jxqMrF7mYWI5iPgGmiAXAseQpiYHLVAFxaWh8wHb6ChNXD36L1rZLkWDG11Plluqi6M4sR_z_tImenWW371GUUatekKoJSn16wiZn6166hAkoCuZMY_All3r0_8IIANW5kdsP8oQUXhy3tnfCOoNL4uOlwNqm_Jmh6aU_dgKfxDsrRUb-vUy6Jtg22AqN8bMly_dGtlRuf9KZ2iyP1bUzApPo" />
+                <p class="text-gray-600 dark:text-gray-400 italic">
+                  "Hướng dẫn dành cho phụ huynh thật sự rất hữu ích. Tôi không
+                  nói tiếng Anh lưu loát, nhưng hướng dẫn rất rõ ràng nên tôi
+                  có thể tự tin giúp con trai học. Chúng tôi rất thích thời
+                  gian học tập cùng nhau."
+                </p>
+                <div class="flex mt-3 text-yellow-400">
+                  <span class="material-symbols-outlined">star</span>
+                  <span class="material-symbols-outlined">star</span>
+                  <span class="material-symbols-outlined">star</span>
+                  <span class="material-symbols-outlined">star</span>
+                  <span class="material-symbols-outlined">star_half</span>
+                </div>
+                <h3 class="mt-4 text-xl font-display font-semibold text-gray-800 dark:text-white">
+                  Vũ Duy Tùng An
+                </h3>
+                <p class="text-sm text-gray-500 dark:text-gray-300">
+                  Bố của 1 bé trai 4 tuổi
+                </p>
+              </div>
+              <div class="bg-white dark:bg-gray-800 p-6 rounded-2xl shadow-cute flex flex-col items-center text-center">
+                <img alt="Photo of parent Emily R." class="w-24 h-24 rounded-full mb-4 object-cover"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuCwwsfWjjBJhRgievG8yHyqmgK2rARFWgYHFHPwE9QOI8X3MR5w2BGQM7Tsw3YPTP1pgut1ZkbEp0Ba0aaQIfDaWx32C1YS7kg36EKTrbBa_SQawlFBHhCG3bzWZ3nGvkcUc7qpUAlhHHxnyPSn94BJtfncJbGOU1P9y24-pmri7kMtnsdpaMTYxr-aReZTePEAvGjI76ZyvuHpSVUR04Daw0qr8r4de_5sRWIW2tKuGw3qEJIfTtC5bAgOCHZSzu7H80LhgBSoS90" />
+                <p class="text-gray-600 dark:text-gray-400 italic">
+                  "Tôi đã tìm kiếm một trang web về sách đa dạng, phù hợp với các bé nhà mình, và đây chính
+                  là nó. Sự kết hợp giữa sách học tiếng Anh, kĩ năng sống và truyện
+                  đã giúp tôi rất nhiều trong việc học của bé. Rất đáng được
+                  khuyên dùng!"
+                </p>
+                <div class="flex mt-3 text-yellow-400">
+                  <span class="material-symbols-outlined">star</span>
+                  <span class="material-symbols-outlined">star</span>
+                  <span class="material-symbols-outlined">star</span>
+                  <span class="material-symbols-outlined">star</span>
+                  <span class="material-symbols-outlined">star</span>
+                </div>
+                <h3 class="mt-4 text-xl font-display font-semibold text-gray-800 dark:text-white">
+                  Đặng Thị Thùy Linh
+                </h3>
+                <p class="text-sm text-gray-500 dark:text-gray-300">
+                  Mẹ của cặp sinh đôi, 5 tuổi
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="py-24 bg-sky-50 dark:bg-gray-800 overflow-hidden">
+        <div class="container mx-auto px-6 relative">
+          <div class="text-center mb-16">
+            <h2 class="text-4xl font-display font-bold text-gray-800 dark:text-white relative inline-block">
+              <span
+                class="absolute -top-4 -left-8 bg-green-200/50 dark:bg-green-700/50 rounded-full w-20 h-20 -z-10"></span>
+              Chúng Tôi Là Người Bạn Đồng Hành Trong Hành Trình Đọc Sách Của Bé
+            </h2>
+            <p class="mt-4 max-w-3xl mx-auto text-gray-600 dark:text-gray-400 text-lg">
+              Bạn và bé sẽ không một mình trên con đường khám phá tri thức. Chúng tôi mang đến những công cụ, hoạt động
+              và sự hỗ trợ để việc đọc sách tại nhà trở thành một trải nghiệm đầy niềm vui và ấm áp cho cả gia đình.
+            </p>
+          </div>
+          <div class="grid md:grid-cols-2 gap-12 items-center">
+            <div class="flex justify-center">
+              <img alt="Happy parent and child reading a book together" class="w-full max-w-sm rounded-3xl shadow-cute"
+                src="/imgvid/Ảnh động.gif" />
+            </div>
+            <div class="space-y-8">
+              <div class="flex items-start space-x-4">
+                <div
+                  class="flex-shrink-0 bg-brand-cyan text-white rounded-full h-12 w-12 flex items-center justify-center">
+                  <span class="material-symbols-outlined text-2xl">auto_stories</span>
+                </div>
+                <div>
+                  <h3 class="text-xl font-body font-bold text-gray-800 dark:text-white">
+                    Kho Sách & Tài Nguyên Đa Dạng
+                  </h3>
+                  <p class="mt-1 text-gray-600 dark:text-gray-400">
+                    Khám phá thư viện truyện thiếu nhi phong phú với sách minh họa, truyện đọc, âm thanh kể chuyện và
+                    nhiều hoạt động thú vị. Giúp bé mở rộng trí tưởng tượng và nuôi dưỡng thói quen đọc sách mỗi ngày.
+                  </p>
+                </div>
+              </div>
+              <div class="flex items-start space-x-4">
+                <div
+                  class="flex-shrink-0 bg-brand-pink text-white rounded-full h-12 w-12 flex items-center justify-center">
+                  <span class="material-symbols-outlined text-2xl">trending_up</span>
+                </div>
+                <div>
+                  <h3 class="text-xl font-body font-bold text-gray-800 dark:text-white">
+                    Theo Dõi Hành Trình Của Bé Dễ Dàng
+                  </h3>
+                  <p class="mt-1 text-gray-600 dark:text-gray-400">
+                    Phụ huynh có thể xem bé đã đọc những gì, hoàn thành bao nhiêu trang hoặc câu chuyện, cùng những mốc
+                    tiến bộ nhỏ đáng yêu. Hãy cùng bé ăn mừng từng bước trưởng thành nhé!
+                  </p>
+                </div>
+              </div>
+              <div class="flex items-start space-x-4">
+                <div
+                  class="flex-shrink-0 bg-brand-yellow text-white rounded-full h-12 w-12 flex items-center justify-center">
+                  <span class="material-symbols-outlined text-2xl">school</span>
+                </div>
+                <div>
+                  <h3 class="text-xl font-body font-bold text-gray-800 dark:text-white">
+                    Hướng Dẫn & Hỗ Trợ Từ Chuyên Gia
+                  </h3>
+                  <p class="mt-1 text-gray-600 dark:text-gray-400">
+                    Tham gia cộng đồng dành cho phụ huynh để nhận những lời khuyên hữu ích, mẹo dạy trẻ đọc sách và sự
+                    tư vấn từ các chuyên gia giáo dục mầm non, giúp việc đọc sách trở nên nhẹ nhàng và hiệu quả hơn.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="text-center mt-16">
+            <a class="bg-brand-green hover:bg-green-600 text-white font-bold py-4 px-10 rounded-full shadow-lg transition-transform transform hover:scale-105 inline-flex items-center text-lg"
+              href="#">
+              BẮT ĐẦU NGAY
+              <span class="material-symbols-outlined ml-2">arrow_forward</span>
+            </a>
+          </div>
+        </div>
+      </section>
+      <section class="py-24 bg-background-light dark:bg-background-dark">
+        <div class="container mx-auto px-6">
+          <div class="text-center mb-12">
+            <h2 class="text-4xl font-display font-bold text-gray-800 dark:text-white">
+              Nhận Báo Giá &amp; Mẫu PDF Demo
+            </h2>
+          </div>
+          <div class="flex flex-col md:flex-row gap-8 max-w-6xl mx-auto">
+            <div class="md:w-1/2 space-y-6">
+              <div class="bg-white dark:bg-gray-800 p-6 rounded-2xl shadow-cute flex items-center space-x-4">
+                <img alt="Yellow backpack" class="w-24 h-24"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuCDhs9aUrwK1BB9MDgmJrjmULvjOCxHXIPaHOr4gSiwv1d9xR50FaIxd8UcIysHhDuJ8-7I_hjM7JXO1LwxZxVRUEw2-6zYIKPloQIZ2xsXM85_SK8Ko_mGRw4efSY1NU77IPXxgnuAU0qasAMHwu7SUkmfMC58vVP35P-FJcGFcBlTXZMdQKbuZVwiG6Bd9z0RZoNKbHSehp0814ru8WgQE5tpwV3xeDFJYB1Nt9Ypo91RGpM_oBrsQi872c9W5KYLoOoNhv9FsEA" />
+                <div class="flex-grow">
+                  <div class="flex justify-between items-center">
+                    <h3 class="font-body font-semibold text-xl text-gray-800 dark:text-white">
+                      Combo 4 Sách Tiếng Anh
+                    </h3>
+                    <span class="bg-brand-pink text-white text-xs font-bold px-3 py-1 rounded-full">-20%</span>
+                  </div>
+                  <div class="flex items-baseline space-x-2 mt-1">
+                    <p class="text-gray-500 line-through">100.000đ</p>
+                    <p class="text-brand-pink font-bold text-2xl">80.000đ</p>
+                  </div>
+                  <p class="text-sm text-gray-600 dark:text-gray-400 mt-1">
+                    Bao gồm: Sách bảng chữ cái, Vui học tiếng anh, Sách cho trẻ 5-6 tuổi, Sách cho trẻ 3-4 tuổi
+                  </p>
+                </div>
+              </div>
+              <div class="bg-white dark:bg-gray-800 p-6 rounded-2xl shadow-cute flex items-center space-x-4">
+                <img alt="Blue backpack" class="w-24 h-24"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuDtCSoejfKyuLk0-XhEATCMC_58Tt6ANLMIPhQZ7D4-o1DVzfGlzH1m-5YgExAAlP9inF_8_q9bNmlfozpxVVUHCDaFXaTLMIxnFUg9dEm_5GCqE_bh6aF-CRWD2QVxLFP4KdVynhOy-c0eBhs2YuE_xtU86ocxhMT2otfYu-40823nkJn57nVRTn8HOAbrr9l0_YtJFNCIkDKbKnc7enumeu_F02GyRW6NrdPbPOGqX1J5F1GDzJMttQWjHLgFqtJN8k_wXiS4Vf0" />
+                <div class="flex-grow">
+                  <div class="flex justify-between items-center">
+                    <h3 class="font-body font-semibold text-xl text-gray-800 dark:text-white">
+                      Combo 4 Sách Khoa Học &amp; Truyện
+                    </h3>
+                    <span class="bg-brand-pink text-white text-xs font-bold px-3 py-1 rounded-full">-20%</span>
+                  </div>
+                  <div class="flex items-baseline space-x-2 mt-1">
+                    <p class="text-gray-500 line-through">150.000đ</p>
+                    <p class="text-brand-pink font-bold text-2xl">120.000đ</p>
+                  </div>
+                  <p class="text-sm text-gray-600 dark:text-gray-400 mt-1">
+                    Bao gồm: Sách 10 vạn câu hỏi vì sao, Tôi là Bêtô, Sách Kiến thức khoa học cho học sinh tiểu học,
+                    Sách bách khoa tri thức.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="md:w-1/2 bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-cute">
+              <h3 class="text-2xl font-body font-bold text-center text-gray-800 dark:text-white">
+                Đăng Ký Nhận Tư Vấn &amp; Báo Giá
+              </h3>
+              <p class="text-center text-sm text-gray-500 dark:text-gray-400 mt-2 mb-6">
+                Nhập Email + Số điện thoại để nhận mẫu và hướng dẫn sử dụng từ
+                đội ngũ chuyên gia của chúng tôi!
+              </p>
+              <form class="space-y-4">
+                <div>
+                  <label class="sr-only" for="name">Tên Phụ Huynh</label>
+                  <input
+                    class="w-full rounded-lg border-gray-300 dark:border-gray-600 bg-gray-50 dark:bg-gray-700 focus:ring-brand-blue focus:border-brand-blue text-gray-700 dark:text-gray-200 py-3"
+                    id="name" placeholder="Tên Phụ Huynh" type="text" />
+                </div>
+                <div>
+                  <label class="sr-only" for="phone">Số Điện Thoại</label>
+                  <input
+                    class="w-full rounded-lg border-gray-300 dark:border-gray-600 bg-gray-50 dark:bg-gray-700 focus:ring-brand-blue focus:border-brand-blue text-gray-700 dark:text-gray-200 py-3"
+                    id="phone" placeholder="Số Điện Thoại" type="tel" />
+                </div>
+                <div>
+                  <label class="sr-only" for="email">Email để nhận mẫu PDF</label>
+                  <input
+                    class="w-full rounded-lg border-gray-300 dark:border-gray-600 bg-gray-50 dark:bg-gray-700 focus:ring-brand-blue focus:border-brand-blue text-gray-700 dark:text-gray-200 py-3"
+                    id="email" placeholder="Email để nhận mẫu PDF" type="email" />
+                </div>
+                <button
+                  class="w-full bg-brand-pink hover:bg-red-600 text-white font-bold py-3 px-6 rounded-lg shadow-lg transition-transform transform hover:scale-105"
+                  type="submit">
+                  Nhận Tư Vấn Ngay
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="bg-brand-blue dark:bg-indigo-900 text-white py-12">
+      <div class="container mx-auto px-6 grid md:grid-cols-3 gap-8">
+        <div>
+          <h3 class="text-4xl font-display font-bold">NOVAKID</h3>
+          <p class="mt-3 text-blue-200 font-body">Đồng hành cùng trẻ trên hành trình khám phá thế giới</p>
+          <p class="mt-5 font-bold text-lg">
+            Hotline:
+            <a class="text-brand-yellow" href="tel:0774716XXX">0774.716.XXX</a>
+          </p>
+          <div class="flex space-x-3 mt-4">
+            <a class="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center hover:opacity-80 transition-opacity"
+              href="#">
+              <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                <path
+                  d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.495v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.323-1.325z">
+                </path>
+              </svg>
+            </a>
+            <a class="w-10 h-10 bg-pink-500 rounded-full flex items-center justify-center hover:opacity-80 transition-opacity"
+              href="#">
+              <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
+                <path
+                  d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.162 6.162 6.162 6.162-2.759 6.162-6.162-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4s1.791-4 4-4 4 1.79 4 4-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44 1.441-.645 1.441-1.44-.645-1.44-1.441-1.44z">
+                </path>
+              </svg>
+            </a>
+            <a class="w-10 h-10 bg-sky-400 rounded-full flex items-center justify-center hover:opacity-80 transition-opacity"
+              href="#">
+              <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
+                <path
+                  d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616v.064c0 2.298 1.634 4.212 3.793 4.65- indulging.586.16-1.21.188-1.84.07.608 1.883 2.372 3.256 4.465 3.293-1.711 1.34-3.869 2.13-6.22 2.13-.404 0-.802-.023-1.195-.069 2.208 1.413 4.832 2.234 7.646 2.234 9.176 0 14.197-7.618 14.197-14.197 0-.215-.005-.428-.014-.64.975-.7 1.817-1.58 2.487-2.572z">
+                </path>
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div>
+          <h4 class="font-bold text-lg text-brand-yellow">
+            ĐỊA ĐIỂM Ở HÀ NỘI
+          </h4>
+          <p class="mt-2 text-blue-200">
+            <span class="font-bold">Cơ Sở Chính:</span> Đại Học Xây Dựng Hà
+            Nội, 55 Đ. Giải Phóng, Phường Phương Liệt, Quận Thanh Xuân, Hà Nội
+          </p>
+        </div>
+
+        <div>
+          <h4 class="font-bold text-lg text-brand-yellow">
+            THÔNG TIN THANH TOÁN & CHUYỂN KHOẢN
+          </h4>
+          <p class="mt-2 text-blue-200">
+            <span class="font-bold">Tên Tài Khoản:</span> Nguyễn Hoàng Việt<br />
+            <span class="font-bold">Số Tài Khoản:</span> 0774.716.xxx<br />
+            <span class="font-bold">Ngân Hàng:</span> MB Bank
+            <br />
+          </p>
+          <p class="text-sm mt-4 text-blue-300">
+            © Copyright 2025 NovaKid. Design by Nhóm 2 -67PM1
+          </p>
+        </div>
+      </div>
+    </footer>
+  </div>
+</body>
+
+</html>
